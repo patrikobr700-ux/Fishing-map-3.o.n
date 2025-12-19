@@ -1,8 +1,12 @@
 {
-  "name": "Fishing Map",
-  "short_name": "FishingMap",
-  "start_url": "./index.html",
-  "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#1f6aff"
+  "barva_pozadí": "#ffffff",
+  "adresář": "směr",
+  „display“: „samostatný“,
+  "jméno": "patrikobr700-ux.github",
+  „orientace“: „libovolná“,
+  "rozsah": "/",
+  „short_name“: „patrikobr700-ux.github“,
+  „start_url“: „patrikobr700-ux.github“,
+  "barva_témy": "#751a1a",
+  „jazyk“: „cs“
 }
