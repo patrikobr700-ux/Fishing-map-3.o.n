@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fishing Map PWA</title>
+
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+  <style>
+    html, body, #map { height: 100%; margin: 0; }
+    #map { width: 100%; }
+  </style>
+</head>
+
+<body>
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  const map = L.map('map').setView([49.297, 17.393], 11);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19
+  }).addTo(map);
+
+  fetch('datapoints.json')
+    .then(r => r.json())
+    .then(data => {
+      data.forEach(p => {
+        L.marker([p.lat, p.lon])
+          .addTo(map)
+          .bindPopup(
+            `<b>${p.name}</b><br>
+             Hloubka: ${p.depth} m<br>
+             Druhy: ${p.species.join(', ')}`
+          );
+      });
+    })
+    .catch(err => console.error('JSON chyba', err));
+
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js');
+  }
+</script>
+</body>
+</html>
