@@ -1,0 +1,7 @@
+[
+  {"name":"Morava – Kvasice jez","lat":49.2501,"lon":17.4302,"depth":3.2,"species":["kapr","sumec"]},
+  {"name":"Morava – Bělov tůně","lat":49.2477,"lon":17.4490,"depth":2.8,"species":["štika","candát"]},
+  {"name":"Morava – Kroměříž u Bagru","lat":49.2977,"lon":17.3927,"depth":3.0,"species":["kapr","amur"]},
+  {"name":"Moštěnka – Skaštice","lat":49.3134,"lon":17.4044,"depth":1.8,"species":["okoun"]},
+  {"name":"Bečva – Troubky","lat":49.4200,"lon":17.3400,"depth":2.9,"species":["kapr","candát"]}
+]
